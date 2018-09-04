@@ -12,3 +12,5 @@ C:\Users\Inpachi\Desktop\First Projet\SOSCSRPG\WPFUI\obj\Debug\WPFUI.Properties.
 C:\Users\Inpachi\Desktop\First Projet\SOSCSRPG\WPFUI\obj\Debug\WPFUI.csproj.GenerateResource.Cache
 C:\Users\Inpachi\Desktop\First Projet\SOSCSRPG\WPFUI\obj\Debug\WPFUI.exe
 C:\Users\Inpachi\Desktop\First Projet\SOSCSRPG\WPFUI\obj\Debug\WPFUI.pdb
+C:\Users\Inpachi\Desktop\First Projet\SOSCSRPG\WPFUI\bin\Debug\Engine.dll
+C:\Users\Inpachi\Desktop\First Projet\SOSCSRPG\WPFUI\bin\Debug\Engine.pdb
