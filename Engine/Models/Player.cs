@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.ComponentModel;
 
 namespace Engine.Models
 {
-    public class Player : INotifyPropertyChanged
+    public class Player : BaseNotificationClass
     {
         private int _experiencePoints;
         private int _hitPoints;
@@ -53,7 +54,7 @@ namespace Engine.Models
             set
             {
                 _experiencePoints = value;
-                OnPropertyChanged("ExperiencePoints");
+                OnPropertyChanged(nameof(ExperiencePoints));
             }
         }
 
@@ -63,7 +64,7 @@ namespace Engine.Models
             set
             {
                 _level = value;
-                OnPropertyChanged("Level");
+                OnPropertyChanged(nameof(Level));
             }
         }
 
@@ -73,15 +74,18 @@ namespace Engine.Models
             set
             {
                 _gold = value;
-                OnPropertyChanged("Gold");
+                OnPropertyChanged(nameof(Gold));
             }
         }
+        
+        public ObservableCollection<GameItem>  Inventory { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public ObservableCollection<QuestStatus> Quests { get; set; }
 
-        protected virtual void OnPropertyChanged(string propertyName)
+        public Player()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            Inventory = new ObservableCollection<GameItem>();
+            Quests = new ObservableCollection<QuestStatus>();
         }
     }
 }
